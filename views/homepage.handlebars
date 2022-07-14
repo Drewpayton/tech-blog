@@ -1,15 +1,11 @@
 {{#each blogs as |blogs|}}
-
-
-
-<div class="post">
-    <div class="postin">
-    <h1 class="header-post">{{blogs.name}}</h1>
-    <h3 class="center">{{blogs.description}}</h3>
+  <a href="/blog/{{blogs.id}}" style="text-decoration: none; color:black;">
+    <div class="post">
+      <div class="postin">
+        <h1 class="header-post">{{blogs.name}}</h1>
+        <h6>{{{loggedin}}}</h6>
+        <h3 class="center">{{blogs.description}}</h3>
+      </div>
     </div>
-</div>
-
-
-
-
+  </a>
 {{/each}}

@@ -1,0 +1,25 @@
+<div class="post">
+  <div class="postin">
+    <h1 class="header-post">{{name}}</h1>
+    <h3 class="center">{{description}}</h3>
+  </div>
+</div>
+
+{{!-- {{#if blog.comments}} --}}
+
+<div>
+  <h1>{{comments}}</h1>
+</div>
+{{!-- {{/if}} --}}
+<div>
+  <form class="form login-form form-custom-comment" id="comment-form">
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-input" type="text" id="comment"></textarea>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" data-id="{{id}}" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="d-inline-flex center align-items-center">
+    <h1 class="center">Hello {{name}}</h1>
+</div>
+
+<div>
+    
+
+<div class="row mt-4 mx-5">
+  <div class="col-md-6">
+    <h3>Create a New Post</h3>
+    <form class="form new-project-form">
+      <div class="mb-3 form-group">
+        <label for="project-name" class="form-label">Title</label>
+        <input type="text" class="form-control" id="project-name" name="project-name" aria-describedby="project-name">
+      </div>
+      <div class="mb-3 form-group">
+        <text for="project-desc" class="form-label">Content</label>
+        <textarea class="form-control" name="project-desc" id="project-desc" style="resize: none;"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+{{#if blogs.length}}
+<div class="project-list">
+<h3 class="m-5">Current Blogs:</h3>
+
+  {{#each blogs as |blogs|}}
+  <a href="/blog/{{blogs.id}}" style="text-decoration: none;">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="d-flex justify-content-center">{{blogs.name}}</h5>
+        {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
+      </div>
+      </a>
+       <div class="d-flex  justify-content-center">
+        <button class="btn btn-sm btn-danger mx-auto" data-id="{{blogs.id}}">DELETE</button>
+      </div>
+    </div>
+  </div>
+  
+  {{/each}}
+  {{/if}}
+
+
+<script src="./js/profile.js"></script>

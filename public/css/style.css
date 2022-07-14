@@ -66,3 +66,31 @@ body {
     padding: 25px;
 }
 
+.nobutton {
+    border: none;
+    background-color: transparent;
+}
+
+.space:hover {
+    color: bisque;
+}
+
+.mhieght{
+    max-height: 50px;
+}
+
+.form-custom-comment {
+    display: flex;
+    justify-content: center;
+}
+
+#comment {
+    width: 50vw;
+    resize: none;
+}
+
+.new-post {
+    padding: 10px;
+    background-color: lightblue;
+    border: 2px solid black;
+}
